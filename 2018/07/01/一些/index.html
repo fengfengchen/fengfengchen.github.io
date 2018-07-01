@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="思考," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="The world is under my feet">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://canbelieve.gitee.io/tags/index.html">
+<meta name="description" content="jq中的index()方法理解：$(this).index() 可以获取当前元素在同级父级元素下的索引位置，若此对象存在拥有不同父级的情况，那么他们的索引值不会一直叠加；需要用到下面的这种形式$(father obj).index(thisobj),这样的形式可以获取当然的对象在其集合对象的索引位置，即使这些对象不再同一级父亲下。 css元素选择器：兄弟选择器 +：若为h2 + p 形式则表示只">
+<meta name="keywords" content="思考">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一些理解">
+<meta property="og:url" content="http://canbelieve.gitee.io/2018/07/01/一些/index.html">
 <meta property="og:site_name" content="假面">
-<meta property="og:description" content="The world is under my feet">
+<meta property="og:description" content="jq中的index()方法理解：$(this).index() 可以获取当前元素在同级父级元素下的索引位置，若此对象存在拥有不同父级的情况，那么他们的索引值不会一直叠加；需要用到下面的这种形式$(father obj).index(thisobj),这样的形式可以获取当然的对象在其集合对象的索引位置，即使这些对象不再同一级父亲下。 css元素选择器：兄弟选择器 +：若为h2 + p 形式则表示只">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-30T05:14:24.170Z">
+<meta property="og:updated_time" content="2018-07-01T05:02:10.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="The world is under my feet">
+<meta name="twitter:title" content="一些理解">
+<meta name="twitter:description" content="jq中的index()方法理解：$(this).index() 可以获取当前元素在同级父级元素下的索引位置，若此对象存在拥有不同父级的情况，那么他们的索引值不会一直叠加；需要用到下面的这种形式$(father obj).index(thisobj),这样的形式可以获取当然的对象在其集合对象的索引位置，即使这些对象不再同一级父亲下。 css元素选择器：兄弟选择器 +：若为h2 + p 形式则表示只">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://canbelieve.gitee.io/tags/"/>
+  <link rel="canonical" href="http://canbelieve.gitee.io/2018/07/01/一些/"/>
 
 
 
 
 
-  <title>tags | 假面</title>
+  <title>一些理解 | 假面</title>
   
 
 
@@ -260,40 +261,151 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/07/01/一些/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈锋">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="假面">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">tags</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Vue/" style="font-size: 12px; color: #ccc">Vue</a> <a href="/tags/思考/" style="font-size: 12px; color: #ccc">思考</a> <a href="/tags/总结/" style="font-size: 12px; color: #ccc">总结</a> <a href="/tags/移动端/" style="font-size: 12px; color: #ccc">移动端</a> <a href="/tags/记录/" style="font-size: 12px; color: #ccc">记录</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">一些理解</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T12:58:44+08:00">
+                2018-07-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <ol>
+<li>jq中的index()方法理解：<br>$(this).index() 可以获取当前元素在同级父级元素下的索引位置，若此对象存在拥有不同父级的情况，那么他们的索引值不会一直叠加；需要用到下面的这种形式<br>$(father obj).index(thisobj),这样的形式可以获取当然的对象在其集合对象的索引位置，即使这些对象不再同一级父亲下。</li>
+<li>css元素选择器：<br>兄弟选择器 +：若为h2 + p 形式则表示只选择h2紧接着的p选择，此时只有一个元素被选择，若为 p + p 形式，则表示选择拥有相同的父元素的除了第一个p元素的其他所有p;</li>
+</ol>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/思考/" rel="tag"># 思考</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/01/前端问题记录/" rel="next" title="前端常用样式">
+                <i class="fa fa-chevron-left"></i> 前端常用样式
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/01/移动端小结/" rel="prev" title="移动端小结">
+                移动端小结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
