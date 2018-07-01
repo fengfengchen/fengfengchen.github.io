@@ -83,11 +83,11 @@
 <meta name="keywords" content="记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="开启个人博客">
-<meta property="og:url" content="http://canbelieve.gitee.io/2018/05/30/第一篇文章/index.html">
+<meta property="og:url" content="http://canbelieve.gitee.io/2018/05/30/开启个人博客/index.html">
 <meta property="og:site_name" content="假面">
 <meta property="og:description" content="一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。 这第一篇文章就记录一下这个博客的从无到有好了。 jekyll VS hexo一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp;am">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-30T11:19:04.370Z">
+<meta property="og:updated_time" content="2018-07-01T03:33:53.925Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开启个人博客">
 <meta name="twitter:description" content="一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。 这第一篇文章就记录一下这个博客的从无到有好了。 jekyll VS hexo一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp;am">
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://canbelieve.gitee.io/2018/05/30/第一篇文章/"/>
+  <link rel="canonical" href="http://canbelieve.gitee.io/2018/05/30/开启个人博客/"/>
 
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/05/30/第一篇文章/">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/05/30/开启个人博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
@@ -345,15 +345,26 @@
 <h2 id="jekyll-VS-hexo"><a href="#jekyll-VS-hexo" class="headerlink" title="jekyll VS hexo"></a>jekyll VS hexo</h2><p>一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp; node 就行，对于一个做前端的来说，完全是标配啊。</p>
 <h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol>
 <li><p>打开命令行工具（cmd），并在全局环境下安装hexo工具；</p>
-<figure class="highlight plain"><figcaption><span>install hexo-cli -g ``` </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 在某个目录下新建blog网站的文件夹，并初始化；</span><br><span class="line"></span><br><span class="line">   ``` hexo init blog</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install hexo-cli -g</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在某个目录下新建blog网站的文件夹，并初始化；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>进入这个项目，并安装相应的包文件；</p>
-<figure class="highlight plain"><figcaption><span>blog ```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>本地预览，开启本地服务器；</p>
-<p><code>hexo server</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<p>到此，基本上你就可以预览到官方的默认hello页面了，当然这只是本地的，别人是访问不到的，下一步，我们需要将blog部署到线上，让别人也能看得到；</p>
+<h2 id="部署到线上"><a href="#部署到线上" class="headerlink" title="部署到线上"></a>部署到线上</h2><p>你可以单独弄一个服务器或者也可以使用别人提供的这种服务，比如说 GitHub 和 码云 都是提供这种服务的，就是那个pages服务，我选择的是码云，那就以码云为例好了。<br>首先：需要在码云上建立一个仓库，这个从仓库的名字最好是你的英文名字，或者一个看起来好不错的英文，<br>仓库建好之后，复制仓库的url地址，打开本地项目下一级目录中的_config.yml文件（这个是配置文件），找到deploy字段（最底部），替换ropo的值为刚才复制的地址。<br>其次：安装自动部署工具</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>然后： 使用命令部署发布</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+<p>第一部署发布需要验证码云的账号密码，稍等一下，提示发布成功之后，访问你建立的那个项目中的pages服务，你会看到一个类似于这个<a href="https://canbelieve.gitee.io的地址，访问你的这个地址，就能看到你发布的内容啦。" target="_blank" rel="noopener">https://canbelieve.gitee.io的地址，访问你的这个地址，就能看到你发布的内容啦。</a></p>
+<p>到此，一个简单的blog就建立成功了，之后还有主题，导航，评论等内容，就需要自己去寻找思路了。</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo文档</a><br><a href="https://hooray.github.io/posts/15e2d21f" target="_blank" rel="noopener">快速搭建个人博客</a></p>
 
       
     </div>
@@ -499,7 +510,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jekyll-VS-hexo"><span class="nav-number">1.</span> <span class="nav-text">jekyll VS hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jekyll-VS-hexo"><span class="nav-number">1.</span> <span class="nav-text">jekyll VS hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到线上"><span class="nav-number">3.</span> <span class="nav-text">部署到线上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
 
           </div>
