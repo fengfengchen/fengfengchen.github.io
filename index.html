@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,50 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
@@ -50,45 +102,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/siteicon.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/siteicon.png?v=6.4.1">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="The world is under my feet">
-<meta property="og:type" content="website">
-<meta property="og:title" content="假面">
-<meta property="og:url" content="http://canbelieve.gitee.io/index.html">
-<meta property="og:site_name" content="假面">
-<meta property="og:description" content="The world is under my feet">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="假面">
-<meta name="twitter:description" content="The world is under my feet">
 
 
 
@@ -96,16 +128,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
+    scheme: 'Pisces',
+    version: '6.4.1',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -117,12 +147,36 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="The world is under my feet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="假面">
+<meta property="og:url" content="http://canbelieve.gitee.io/index.html">
+<meta property="og:site_name" content="假面">
+<meta property="og:description" content="The world is under my feet">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="假面">
+<meta name="twitter:description" content="The world is under my feet">
+
+
+
+
+
 
   <link rel="canonical" href="http://canbelieve.gitee.io/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>假面</title>
   
@@ -134,9 +188,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -153,19 +235,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">假面</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -173,65 +253,50 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home menu-item-active">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -239,12 +304,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
@@ -257,6 +333,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -266,8 +344,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -281,11 +359,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/01/Vue学习记录/" itemprop="url">Vue学习记录</a></h1>
+                <a class="post-title-link" href="/2018/07/01/Vue学习记录/" itemprop="url">
+                  Vue学习记录
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -293,13 +381,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T14:28:25+08:00">
-                2018-07-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-01 14:28:25" itemprop="dateCreated datePublished" datetime="2018-07-01T14:28:25+08:00">2018-07-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-20 18:39:30" itemprop="dateModified" datetime="2018-09-20T18:39:30+08:00">2018-09-20</time>
+              
             
           </span>
 
@@ -332,15 +437,20 @@
 
       
         
-          
-            <h2 id="html部分"><a href="#html部分" class="headerlink" title="html部分:"></a>html部分:</h2><p>        内容中 输出内容；<br>v-？             表示Vue指令，放在标签头中，用于各种指令<br>v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等<br>v-once          绑定一个变量，只变化一次<br>v-text          输出变量内容作为标签内容<br>v-html          区别在于可以转化HTML格式<br>v-model         双向绑定变量，变量值改变，会反应在标签中，标签内容改变，也会改变变量值<br>v-for           循环指令<br>v-if/v-else v-if/v-else-if…/v-else            条件判断<br>v-show          控制显示隐藏 效果比v-if要好点</p>
-<h2 id="script部分"><a href="#script部分" class="headerlink" title="script部分"></a>script部分</h2><p>var app = new Vue({});      实例化Vue对象，内容用属性的键值对表示<br>el          表示一个实例化对象，值一般是#ID，字符串<br>data        存放变量数据的地方，本身是一个对象，对象中的元素值可以是字符串，对象，数组之类的<br>computed        计算属性</p>
-<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>props:      子组件的属性变量存放，通常会将父组件的值作为属性值传给子组件<br>slot        内容分发，在模板中定义slot标签的位置，在渲染过程中会将实际标签将其替换，有一个name属性，可以定义实际渲染的部分<br>scrop:      将子组件传递过来的props对象传递给一个临时变量，然后可以读取该临时变量的一些值</p>
-
-          
+          <h2 id="html部分"><a href="#html部分" class="headerlink" title="html部分:"></a>html部分:</h2>        内容中 输出内容；<br>v-？             表示Vue指令，放在标签头中，用于各种指令<br>v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等<br>v-once          绑定一个变量，只变化一次<br>v-text          输出变量内容作为标签内容<br>v-html          区别在于可以转化HTML格式<br>v-model         双向绑定变量，变量值改变，会反应在标签中，标签内容改变，也会改变变量值<br>v-for           循环指令<br>v-if/v-else v-if/v-else-if…/v-else            条件判断<br>v-show          控制显示隐藏 效果比v-if要好点<br><br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/01/Vue学习记录/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -379,6 +489,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -388,8 +500,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -403,11 +515,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/01/移动端小结/" itemprop="url">移动端小结</a></h1>
+                <a class="post-title-link" href="/2018/07/01/移动端小结/" itemprop="url">
+                  移动端小结
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -415,13 +537,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T13:04:05+08:00">
-                2018-07-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-01 13:04:05" itemprop="dateCreated datePublished" datetime="2018-07-01T13:04:05+08:00">2018-07-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-20 18:41:18" itemprop="dateModified" datetime="2018-09-20T18:41:18+08:00">2018-09-20</time>
+              
             
           </span>
 
@@ -454,8 +593,7 @@
 
       
         
-          
-            <ul>
+          <ul>
 <li><p>移动设备常用的3个设置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">&lt;meta content=&quot;width=device-width, initial-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;</span><br></pre></td></tr></table></figure>
 </li>
@@ -470,43 +608,19 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta content=&quot;width=device-width, initial-scale=1.0,user-scalable=no&quot; name=&quot;viewport&quot;&gt;</span><br></pre></td></tr></table></figure>
 <p>这种方式不适合显示已经写死宽度的页面，以这种方式编写的页面需要利用比例，比如rem,em等，并且页面中涉及到的单位都需要转换成这个rem；</p>
 <hr>
-<ul>
-<li><p>解决移动设备上a链接在点击状态下显示带色背景的问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-tap-highlight-color: rgba(0, 0, 0, 0);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>解除移动设备上表单元素默认的样式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-webkit-appearance:none;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>解除移动设备上表单元素在点击状态下出现的背景框：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outline:none;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>移动端单行内容超出并以滑动显示的问题：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.father&#123;overflow: hidden;overflow-x: scroll;width: 100%;&#125;</span><br><span class="line">.father::-webkit-scrollbar&#123;display: none;&#125;</span><br><span class="line">.father ol&#123;white-space: nowrap;display: table;&#125;</span><br><span class="line">.father ol li&#123;dis&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>移动端遮罩情况下阻止页面滑动的问题（阻止默认事件）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">obj.on(&apos;touchmove&apos;,function(e)&#123;e.preventDefault();&#125;);</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>阻止事件冒泡</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.stopPropagation();</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li>移动端页面内容在一个页面内显示的方式：前提是内容的高度加起来一定不会超出移动端屏幕自身的高度，其次把页面分成几个大的结构，然后这些大的结构的高度按照设计图的比例设置（%），结构之间的间距（margin）也设置比例的方式，这样既可保证页面不会因为屏幕大小的不同而超出，需要注意的是：body和HTML元素应该设置{width：100%；height：100%；}包含大结构的元素也需要设置宽高100%；</li>
-</ul>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/01/移动端小结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -545,6 +659,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -554,8 +670,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -569,11 +685,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/01/一些理解/" itemprop="url">一些理解</a></h1>
+                <a class="post-title-link" href="/2018/07/01/一些理解/" itemprop="url">
+                  一些理解
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -581,13 +707,18 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T12:58:44+08:00">
-                2018-07-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-01 12:58:44 / 修改时间：13:02:10" itemprop="dateCreated datePublished" datetime="2018-07-01T12:58:44+08:00">2018-07-01</time>
             
 
             
+              
 
+              
             
           </span>
 
@@ -630,6 +761,9 @@
         
       
     </div>
+
+    
+
     
     
     
@@ -668,6 +802,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -677,8 +813,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -692,11 +828,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/01/前端常用样式/" itemprop="url">前端常用样式</a></h1>
+                <a class="post-title-link" href="/2018/07/01/前端常用样式/" itemprop="url">
+                  前端常用样式
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -704,13 +850,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T12:42:24+08:00">
-                2018-07-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-01 12:42:24" itemprop="dateCreated datePublished" datetime="2018-07-01T12:42:24+08:00">2018-07-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-20 18:41:18" itemprop="dateModified" datetime="2018-09-20T18:41:18+08:00">2018-09-20</time>
+              
             
           </span>
 
@@ -743,8 +906,7 @@
 
       
         
-          
-            <ul>
+          <ul>
 <li><p>清除浮动塌陷的样式：</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.clearfix:after &#123; content: &quot; &quot; ; display: block ;height: 0 ;clear: both ;visibility: hidden ;&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -757,35 +919,19 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">display: -webkit-box;</span><br><span class="line">-webkit-box-orient: vertical;</span><br><span class="line">-webkit-line-clamp: 3;</span><br><span class="line">overflow: hidden;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<hr>
-<ul>
-<li><p>改变输入框的placeholder值得颜色的css写法的问题：</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">::-webkit-input-placeholder &#123; /* WebKit browsers */color:#ccc;&#125;</span><br><span class="line">:-moz-placeholder &#123; /* Mozilla Firefox 4 to 18 */color:#ccc;&#125;</span><br><span class="line">::-moz-placeholder &#123; /* Mozilla Firefox 19+ */color:#ccc;&#125;</span><br><span class="line">:-ms-input-placeholder &#123; /* Internet Explorer 10+ */color:#ccc;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>文本左右对齐的方式（分散对齐）：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">text-align: justify;text-align-last:justify;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>设置文档内容始终会显示在页面底部;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;body&quot;).animate(&#123;scrollTop:$boxheight&#125;,500);</span><br></pre></td></tr></table></figure>
-<p>这样设置会让这个页面的内容始终保持在最下方，可以用做聊天页面，虽然scrollTop表示的是页面卷曲的部分，但是按照我的测试加上理解，在页面没有超出时候不会进行卷曲，另外当页面内容超出的时候，给这个设置一个很大的数值并不会让浏览器按照这个数值进行卷曲，因为页面需要保留可见的高度或者说是屏幕自身的高度，因而卷曲超出屏幕高度的部分。故，设置一个会变化的高度（在这个例子中是我内容盒子的高度），并不会让直接按照这个数值进行卷曲，而是在保留可见高度的情况下进行自动卷曲。</p>
-</li>
-</ul>
-<hr>
-<ul>
-<li><p>可以固定背景，保持背景不会随着元素的移动而移动</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-attachment:fixed;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<hr>
-<p>* </p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/01/前端常用样式/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -824,6 +970,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -833,8 +981,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -848,11 +996,21 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/05/30/开启个人博客/" itemprop="url">开启个人博客</a></h1>
+                <a class="post-title-link" href="/2018/05/30/开启个人博客/" itemprop="url">
+                  开启个人博客
+                </a>
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -860,13 +1018,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-30T12:56:29+08:00">
-                2018-05-30
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-05-30 12:56:29" itemprop="dateCreated datePublished" datetime="2018-05-30T12:56:29+08:00">2018-05-30</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-20 18:41:18" itemprop="dateModified" datetime="2018-09-20T18:41:18+08:00">2018-09-20</time>
+              
             
           </span>
 
@@ -899,8 +1074,7 @@
 
       
         
-          
-            <p>一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。</p>
+          <p>一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。</p>
 <p>这第一篇文章就记录一下这个博客的从无到有好了。</p>
 <h2 id="jekyll-VS-hexo"><a href="#jekyll-VS-hexo" class="headerlink" title="jekyll VS hexo"></a>jekyll VS hexo</h2><p>一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp; node 就行，对于一个做前端的来说，完全是标配啊。</p>
 <h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol>
@@ -910,26 +1084,20 @@
 <li><p>在某个目录下新建blog网站的文件夹，并初始化；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>进入这个项目，并安装相应的包文件；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>本地预览，开启本地服务器；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-</li>
 </ol>
-<p>到此，基本上你就可以预览到官方的默认hello页面了，当然这只是本地的，别人是访问不到的，下一步，我们需要将blog部署到线上，让别人也能看得到；</p>
-<h2 id="部署到线上"><a href="#部署到线上" class="headerlink" title="部署到线上"></a>部署到线上</h2><p>你可以单独弄一个服务器或者也可以使用别人提供的这种服务，比如说 GitHub 和 码云 都是提供这种服务的，就是那个pages服务，我选择的是码云，那就以码云为例好了。<br>首先：需要在码云上建立一个仓库，这个从仓库的名字最好是你的英文名字，或者一个看起来好不错的英文，<br>仓库建好之后，复制仓库的url地址，打开本地项目下一级目录中的_config.yml文件（这个是配置文件），找到deploy字段（最底部），替换ropo的值为刚才复制的地址。<br>其次：安装自动部署工具</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后： 使用命令部署发布</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>第一部署发布需要验证码云的账号密码，稍等一下，提示发布成功之后，访问你建立的那个项目中的pages服务，你会看到一个类似于这个<a href="https://canbelieve.gitee.io的地址，访问你的这个地址，就能看到你发布的内容啦。" target="_blank" rel="noopener">https://canbelieve.gitee.io的地址，访问你的这个地址，就能看到你发布的内容啦。</a></p>
-<p>到此，一个简单的blog就建立成功了，之后还有主题，导航，评论等内容，就需要自己去寻找思路了。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo文档</a><br><a href="https://hooray.github.io/posts/15e2d21f" target="_blank" rel="noopener">快速搭建个人博客</a></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/05/30/开启个人博客/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
+
+    
+
     
     
     
@@ -968,9 +1136,6 @@
           </div>
           
 
-
-          
-
         </div>
         
           
@@ -995,48 +1160,100 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/siteicon.png"
+                alt="陈锋" />
+            
               <p class="site-author-name" itemprop="name">陈锋</p>
               <p class="site-description motion-element" itemprop="description">The world is under my feet</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+
               
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/fengfengchen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="reba0710@163.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/canbelieve/" target="_blank" title="码云"><i class="fa fa-fw fa-globe"></i>码云</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
               </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hzlsourcetree.gitee.io" title="胡椒粉" target="_blank">胡椒粉</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
             
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -1057,13 +1274,17 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-mars"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">陈锋</span>
 
   
+
+  
 </div>
+
+
 
 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
@@ -1074,12 +1295,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a></div>
 
 
 
 
         
+
 
 
 
@@ -1099,7 +1321,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -1118,8 +1343,15 @@
 
 
 
-  
 
+
+
+
+
+
+
+  
+  
 
 
 
@@ -1138,16 +1370,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -1158,42 +1380,40 @@
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
 
 
-
-  
-  
 
   
-
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
 
 
 
   
 
-
   
 
 
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
 
 
 
@@ -1201,11 +1421,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -1229,6 +1445,12 @@
   
 
   
+
+  
+  
+
+  
+
   
 
   

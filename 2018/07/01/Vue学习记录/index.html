@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,50 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic|PT Mono:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
 
 
 
@@ -50,47 +102,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.4.1" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/siteicon.png?v=6.4.1">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/siteicon.png?v=6.4.1">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Vue," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.4.1" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="html部分:        内容中 输出内容；v-？             表示Vue指令，放在标签头中，用于各种指令v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等v-once          绑定一个变量，只变化一次v-text          输出变量内容作为标签内容v-html          区别在于可以转化HTML格">
-<meta name="keywords" content="Vue">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Vue学习记录">
-<meta property="og:url" content="http://canbelieve.gitee.io/2018/07/01/Vue学习记录/index.html">
-<meta property="og:site_name" content="假面">
-<meta property="og:description" content="html部分:        内容中 输出内容；v-？             表示Vue指令，放在标签头中，用于各种指令v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等v-once          绑定一个变量，只变化一次v-text          输出变量内容作为标签内容v-html          区别在于可以转化HTML格">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-01T06:33:54.665Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue学习记录">
-<meta name="twitter:description" content="html部分:        内容中 输出内容；v-？             表示Vue指令，放在标签头中，用于各种指令v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等v-once          绑定一个变量，只变化一次v-text          输出变量内容作为标签内容v-html          区别在于可以转化HTML格">
 
 
 
@@ -98,16 +128,14 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
+    scheme: 'Pisces',
+    version: '6.4.1',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,12 +147,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="html部分:        内容中 输出内容；v-？             表示Vue指令，放在标签头中，用于各种指令v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等v-once          绑定一个变量，只变化一次v-text          输出变量内容作为标签内容v-html          区别在于可以转化HTML格">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue学习记录">
+<meta property="og:url" content="http://canbelieve.gitee.io/2018/07/01/Vue学习记录/index.html">
+<meta property="og:site_name" content="假面">
+<meta property="og:description" content="html部分:        内容中 输出内容；v-？             表示Vue指令，放在标签头中，用于各种指令v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等v-once          绑定一个变量，只变化一次v-text          输出变量内容作为标签内容v-html          区别在于可以转化HTML格">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-20T10:39:30.266Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue学习记录">
+<meta name="twitter:description" content="html部分:        内容中 输出内容；v-？             表示Vue指令，放在标签头中，用于各种指令v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等v-once          绑定一个变量，只变化一次v-text          输出变量内容作为标签内容v-html          区别在于可以转化HTML格">
+
+
+
+
+
 
   <link rel="canonical" href="http://canbelieve.gitee.io/2018/07/01/Vue学习记录/"/>
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Vue学习记录 | 假面</title>
   
@@ -136,9 +190,37 @@
 
 
 
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -154,19 +236,17 @@
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">假面</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -174,65 +254,50 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
-            
-            公益404
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-about">
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
   
 
   
@@ -240,12 +305,23 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+          
           <div id="content" class="content">
             
 
@@ -258,6 +334,8 @@
   
   
 
+  
+
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
@@ -267,8 +345,8 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -280,11 +358,19 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue学习记录</h1>
+          <h1 class="post-title" itemprop="name headline">Vue学习记录
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -292,13 +378,30 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-01T14:28:25+08:00">
-                2018-07-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2018-07-01 14:28:25" itemprop="dateCreated datePublished" datetime="2018-07-01T14:28:25+08:00">2018-07-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-09-20 18:39:30" itemprop="dateModified" datetime="2018-09-20T18:39:30+08:00">2018-09-20</time>
+              
             
           </span>
 
@@ -330,12 +433,15 @@
       
 
       
-        <h2 id="html部分"><a href="#html部分" class="headerlink" title="html部分:"></a>html部分:</h2><p>        内容中 输出内容；<br>v-？             表示Vue指令，放在标签头中，用于各种指令<br>v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等<br>v-once          绑定一个变量，只变化一次<br>v-text          输出变量内容作为标签内容<br>v-html          区别在于可以转化HTML格式<br>v-model         双向绑定变量，变量值改变，会反应在标签中，标签内容改变，也会改变变量值<br>v-for           循环指令<br>v-if/v-else v-if/v-else-if…/v-else            条件判断<br>v-show          控制显示隐藏 效果比v-if要好点</p>
+        <h2 id="html部分"><a href="#html部分" class="headerlink" title="html部分:"></a>html部分:</h2>        内容中 输出内容；<br>v-？             表示Vue指令，放在标签头中，用于各种指令<br>v-bind:/:       绑定一个标签属性，属性值需用引号包裹，可以是一个变量、数组。字符串拼接变量等<br>v-once          绑定一个变量，只变化一次<br>v-text          输出变量内容作为标签内容<br>v-html          区别在于可以转化HTML格式<br>v-model         双向绑定变量，变量值改变，会反应在标签中，标签内容改变，也会改变变量值<br>v-for           循环指令<br>v-if/v-else v-if/v-else-if…/v-else            条件判断<br>v-show          控制显示隐藏 效果比v-if要好点<br><br><a id="more"></a>
 <h2 id="script部分"><a href="#script部分" class="headerlink" title="script部分"></a>script部分</h2><p>var app = new Vue({});      实例化Vue对象，内容用属性的键值对表示<br>el          表示一个实例化对象，值一般是#ID，字符串<br>data        存放变量数据的地方，本身是一个对象，对象中的元素值可以是字符串，对象，数组之类的<br>computed        计算属性</p>
 <h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h2><p>props:      子组件的属性变量存放，通常会将父组件的值作为属性值传给子组件<br>slot        内容分发，在模板中定义slot标签的位置，在渲染过程中会将实际标签将其替换，有一个name属性，可以定义实际渲染的部分<br>scrop:      将子组件传递过来的props对象传递给一个临时变量，然后可以读取该临时变量的一些值</p>
 
       
     </div>
+
+    
+
     
     
     
@@ -387,17 +493,10 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
-          
-
-
           
 
   
@@ -437,48 +536,100 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
+              <img class="site-author-image" itemprop="image"
+                src="/images/siteicon.png"
+                alt="陈锋" />
+            
               <p class="site-author-name" itemprop="name">陈锋</p>
               <p class="site-description motion-element" itemprop="description">The world is under my feet</p>
           </div>
 
-          <nav class="site-state motion-element">
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
 
-            
-              <div class="site-state-item site-state-posts">
               
-                <a href="/archives/">
+
               
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/fengfengchen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="reba0710@163.com" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://gitee.com/canbelieve/" target="_blank" title="码云"><i class="fa fa-fw fa-globe"></i>码云</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友链
               </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://hzlsourcetree.gitee.io" title="胡椒粉" target="_blank">胡椒粉</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
             
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
-                  <span class="site-state-item-name">标签</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -515,13 +666,17 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
+  <span class="with-love" id="animate">
+    <i class="fa fa-mars"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">陈锋</span>
 
   
+
+  
 </div>
+
+
 
 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
@@ -532,12 +687,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Pisces</a></div>
 
 
 
 
         
+
 
 
 
@@ -557,7 +713,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -576,8 +735,15 @@
 
 
 
-  
 
+
+
+
+
+
+
+  
+  
 
 
 
@@ -596,16 +762,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -616,46 +772,44 @@
 
   
   
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.4.1"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.4.1"></script>
 
 
 
   
+  
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=6.4.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.4.1"></script>
 
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.1"></script>
+
 
 
   
 
 
-
-
-	
-
-
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.4.1"></script>
 
 
 
@@ -663,11 +817,7 @@
 
 
 
-
-
   
-
-
 
 
 
@@ -691,6 +841,12 @@
   
 
   
+
+  
+  
+
+  
+
   
 
   
