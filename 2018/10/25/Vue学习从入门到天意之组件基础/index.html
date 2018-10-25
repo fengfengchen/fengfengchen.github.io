@@ -152,18 +152,18 @@
 
 
 
-  <meta name="description" content="组件基础组件是可复用的 Vue 实例，所以组件可以与new vue接收相同的选项，如data,computed等以及生命周期的钩子。仅有的例外是像 el 这样根实例特有的选项；组件带有一个名字；组件可以全局注册，也可以局部注册；需要注意的是：  data属性必须是一个函数，通常是函数返回一个对象 每个组件有且只有一个根元素">
+  <meta name="description" content="组件基础组件是可复用的 Vue 实例，所以组件可以与new vue接收相同的选项，如data,computed等以及生命周期的钩子。仅有的例外是像 el 这样根实例特有的选项；组件带有一个名字；组件可以全局注册，也可以局部注册；需要注意的是：  data属性必须是一个函数，通常是函数返回一个对象 每个组件有且只有一个根元素  组件的结构全局组件： 1234Vue.component(&apos;my-com">
 <meta name="keywords" content="Vue 记录">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue从入门到天意之组件基础">
 <meta property="og:url" content="http://canbelieve.gitee.io/2018/10/25/Vue学习从入门到天意之组件基础/index.html">
 <meta property="og:site_name" content="假面">
-<meta property="og:description" content="组件基础组件是可复用的 Vue 实例，所以组件可以与new vue接收相同的选项，如data,computed等以及生命周期的钩子。仅有的例外是像 el 这样根实例特有的选项；组件带有一个名字；组件可以全局注册，也可以局部注册；需要注意的是：  data属性必须是一个函数，通常是函数返回一个对象 每个组件有且只有一个根元素">
+<meta property="og:description" content="组件基础组件是可复用的 Vue 实例，所以组件可以与new vue接收相同的选项，如data,computed等以及生命周期的钩子。仅有的例外是像 el 这样根实例特有的选项；组件带有一个名字；组件可以全局注册，也可以局部注册；需要注意的是：  data属性必须是一个函数，通常是函数返回一个对象 每个组件有且只有一个根元素  组件的结构全局组件： 1234Vue.component(&apos;my-com">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-25T06:57:38.614Z">
+<meta property="og:updated_time" content="2018-10-25T10:25:50.207Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue从入门到天意之组件基础">
-<meta name="twitter:description" content="组件基础组件是可复用的 Vue 实例，所以组件可以与new vue接收相同的选项，如data,computed等以及生命周期的钩子。仅有的例外是像 el 这样根实例特有的选项；组件带有一个名字；组件可以全局注册，也可以局部注册；需要注意的是：  data属性必须是一个函数，通常是函数返回一个对象 每个组件有且只有一个根元素">
+<meta name="twitter:description" content="组件基础组件是可复用的 Vue 实例，所以组件可以与new vue接收相同的选项，如data,computed等以及生命周期的钩子。仅有的例外是像 el 这样根实例特有的选项；组件带有一个名字；组件可以全局注册，也可以局部注册；需要注意的是：  data属性必须是一个函数，通常是函数返回一个对象 每个组件有且只有一个根元素  组件的结构全局组件： 1234Vue.component(&apos;my-com">
 
 
 
@@ -383,7 +383,7 @@
                 
               
 
-              <time title="创建时间：2018-10-25 13:49:18 / 修改时间：14:57:38" itemprop="dateCreated datePublished" datetime="2018-10-25T13:49:18+08:00">2018-10-25</time>
+              <time title="创建时间：2018-10-25 13:49:18 / 修改时间：18:25:50" itemprop="dateCreated datePublished" datetime="2018-10-25T13:49:18+08:00">2018-10-25</time>
             
 
             
@@ -426,11 +426,11 @@
 <li>data属性必须是一个函数，通常是函数返回一个对象</li>
 <li>每个组件有且只有一个根元素</li>
 </ol>
-<a id="more"></a>
 <h2 id="组件的结构"><a href="#组件的结构" class="headerlink" title="组件的结构"></a>组件的结构</h2><p>全局组件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(&apos;my-component-name&apos;, &#123;</span><br><span class="line">    template:&apos;模板&apos;,</span><br><span class="line">    // ... 选项 ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(<span class="string">'my-component-name'</span>, &#123;</span><br><span class="line">    template:<span class="string">'模板'</span>,</span><br><span class="line">    <span class="comment">// ... 选项 ...</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>局部组件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">    // 其他选项</span><br><span class="line">    components:&#123;</span><br><span class="line">        &apos;component-name&apos;:&apos;字符串模板&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    <span class="comment">// 其他选项</span></span><br><span class="line">    components:&#123;</span><br><span class="line">        <span class="string">'component-name'</span>:<span class="string">'字符串模板'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <h2 id="组件的通信方式"><a href="#组件的通信方式" class="headerlink" title="组件的通信方式"></a>组件的通信方式</h2><p>我们一般可以这么理解，Vue实例直接放置组件实例，故应为父组件，而我们创建的组件实例放置在Vue实例之中，故应为子组件。<br>那么父子组件之间应该应该如何传递数据呢？</p>
 <p>可以用一句话概括：<br>子组件利用prop属性，自定义一些html属性用于获得父组件的数据；<br>子组件利用自然事件，触发绑定在父组件上的自定义事件，向父组件传递消息；</p>
 <p>当在父组件中需要给子组件传递一些内容的时候，我们会用到插槽，用<slot>标签表示</slot></p>
