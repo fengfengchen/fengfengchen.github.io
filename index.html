@@ -340,6 +340,468 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/10/25/Vue从入门到天意之过渡效果/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈锋">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="假面">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/25/Vue从入门到天意之过渡效果/" itemprop="url">
+                  Vue从入门到天意之过渡效果
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-25 17:41:10 / 修改时间：18:20:58" itemprop="dateCreated datePublished" datetime="2018-10-25T17:41:10+08:00">2018-10-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="过渡效果"><a href="#过渡效果" class="headerlink" title="过渡效果"></a>过渡效果</h1><p>Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。<br>包括以下工具：</p>
+<p>在 CSS 过渡和动画中自动应用 class<br>可以配合使用第三方 CSS 动画库，如 Animate.css<br>在过渡钩子函数中使用 JavaScript 直接操作 DOM<br>可以配合使用第三方 JavaScript 动画库，如 Velocity.js</p>
+<h2 id="进入-离开"><a href="#进入-离开" class="headerlink" title="进入/离开"></a>进入/离开</h2><p>这种情况下一般是针对单元素或者是组件来说的，添加效果的方式很简单，只要在单元素或者组件外面套一层<transion></transion>标签即可.</p>
+<p>当插入或删除包含在 transition 组件中的元素时，Vue 将会做以下处理：</p>
+<ol>
+<li><p>自动嗅探目标元素是否应用了 CSS 过渡或动画，如果是，在恰当的时机添加/删除 CSS 类名。</p>
+</li>
+<li><p>如果过渡组件提供了 JavaScript 钩子函数，这些钩子函数将在恰当的时机被调用。</p>
+</li>
+<li><p>如果没有找到 JavaScript 钩子并且也没有检测到 CSS 过渡/动画，DOM 操作 (插入/删除) 在下一帧中立即执行。(注意：此指浏览器逐帧动画机制，和 Vue 的 nextTick 概念不同)</p>
+</li>
+</ol>
+<p>举个例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"show = !show"</span>&gt;</span></span><br><span class="line">    Toggle</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"show"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果transition没有name属性的话，那么会有默认的过渡状态样式类名：</p>
+<p>v-enter     进入过渡的开始状态<br>v-enter-active      进入过渡的生效状态<br>v-enter-to      进入过渡的结束状态<br>v-leave     离开过渡的开始状态<br>v-leave-active      离开过渡的生效状态<br>v-leave-to      离开过渡的结束状态</p>
+<p>可以在这些状态中设置css属性变化。可以是transition，也可以是annimation。</p>
+<p>如果使用了name属性，那么name的属性值将会替代上述类名的前缀v，</p>
+<p>除了自己需要设置的类名外，vue还提供了自定义的过渡状态类名，用来Vue 的过渡系统和其他第三方 CSS 动画库，因为可以直接放入写好的类名</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/animate.css@3.5.1"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example-3"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"show = !show"</span>&gt;</span></span><br><span class="line">    Toggle render</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span></span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">"custom-classes-transition"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">enter-active-class</span>=<span class="string">"animated tada"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">leave-active-class</span>=<span class="string">"animated bounceOutRight"</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"show"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JavaScript 钩子:<br>可以在属性中声明 JavaScript 钩子，这些钩子函数可以结合 CSS transitions/animations 使用，也可以单独使用。</p>
+<p>过渡模式：</p>
+<p>因为同时生效的进入和离开的过渡不能满足所有要求，所以 Vue 提供了 过渡模式</p>
+<h2 id="列表过渡"><a href="#列表过渡" class="headerlink" title="列表过渡"></a>列表过渡</h2><p>选择使用 <code>&lt;transition-group&gt;</code> 组件，</p>
+<p>排列过渡：<br>使用新增的 v-move 特性，在元素的改变定位的过程中应用</p>
+<h2 id="数值过渡"><a href="#数值过渡" class="headerlink" title="数值过渡"></a>数值过渡</h2><p>所有的原始数字都被事先存储起来，可以直接转换到数字。做到这一步，我们就可以结合 Vue 的响应式和组件系统，使用第三方库来实现切换元素的过渡状态。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/10/25/Vue从入门到天意之组件进阶/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈锋">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="假面">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/25/Vue从入门到天意之组件进阶/" itemprop="url">
+                  Vue从入门到天意之组件进阶
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-25 14:58:37 / 修改时间：16:10:23" itemprop="dateCreated datePublished" datetime="2018-10-25T14:58:37+08:00">2018-10-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="组件进阶"><a href="#组件进阶" class="headerlink" title="组件进阶"></a>组件进阶</h1><h2 id="组件的名字"><a href="#组件的名字" class="headerlink" title="组件的名字"></a>组件的名字</h2><p>推荐使用 kebab-case(短横线分隔命名）的方式来命名一个组件，引入的时候，可直接使用</p>
+<h2 id="prop属性"><a href="#prop属性" class="headerlink" title="prop属性"></a>prop属性</h2><p>组件基础提到过prop属性通过一些自定义一些html属性去获得父组件的数据，这是一个单向的数据流，即数据只能从父组件流向子组件。反过来则不行</p>
+<p>实际上prop属性值可以是任何类型，常见的是数组和对象。</p>
+<p>当需要对prop属性值指定类型的时候，可以对其进行验证，可以利用原生构造函数，也可以自定义一个函数</p>
+<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><p>事件名应始终使用 kebab-case 的形式。</p>
+<h2 id="插槽"><a href="#插槽" class="headerlink" title="插槽"></a>插槽</h2><p>Vue 实现了一套内容分发的 API，这套 API 基于当前的 Web Components 规范草案，将 <slot> 元素作为承载分发内容的出口。</slot></p>
+<p>具名插槽：<br>有些时候我们需要特定的结构来展现内容，这个时候就需要给<slot>添加一个name属性,并为其设置一个值。那么我们就可以在组件实例上使用slot属性，向特定的结构插入内容,而没有slot属性的内容将填充在没有name属性的<slot>上</slot></slot></p>
+<h2 id="动态组件"><a href="#动态组件" class="headerlink" title="动态组件"></a>动态组件</h2><p>组件之间切换的时候，会重新创建新的实例，当我们需要缓存切换前组件状态的时候我们应该用<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># 异步组件</span><br><span class="line"></span><br><span class="line">在大型应用中，我们可能需要将应用分割成小一些的代码块，并且只在需要的时候才从服务器加载一个模块。为了简化，Vue 允许你以一个工厂函数的方式定义你的组件，这个工厂函数会异步解析你的组件定义。Vue 只有在这个组件需要被渲染的时候才会触发该工厂函数，且会把结果缓存起来供未来重渲染</span><br></pre></td></tr></table></figure></p>
+<p>Vue.component(‘async-webpack-example’, function (resolve) {<br>    // 这个特殊的 <code>require</code> 语法将会告诉 webpack<br>    // 自动将你的构建代码切割成多个包，这些包<br>    // 会通过 Ajax 请求加载<br>    require([‘./my-async-component’], resolve)<br>})<br><code>`</code></p>
+<p>待补充。。。。。。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/10/25/Vue学习从入门到天意之组件基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈锋">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="假面">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/25/Vue学习从入门到天意之组件基础/" itemprop="url">
+                  Vue从入门到天意之组件基础
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-25 13:49:18 / 修改时间：14:57:38" itemprop="dateCreated datePublished" datetime="2018-10-25T13:49:18+08:00">2018-10-25</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="组件基础"><a href="#组件基础" class="headerlink" title="组件基础"></a>组件基础</h1><p>组件是可复用的 Vue 实例，所以组件可以与new vue接收相同的选项，如data,computed等以及生命周期的钩子。仅有的例外是像 el 这样根实例特有的选项；<br>组件带有一个名字；<br>组件可以全局注册，也可以局部注册；<br>需要注意的是：</p>
+<ol>
+<li>data属性必须是一个函数，通常是函数返回一个对象</li>
+<li>每个组件有且只有一个根元素</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/25/Vue学习从入门到天意之组件基础/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/07/01/Vue学习记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -403,7 +865,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-24 16:03:20" itemprop="dateModified" datetime="2018-10-24T16:03:20+08:00">2018-10-24</time>
+                <time title="修改时间：2018-10-25 14:02:03" itemprop="dateModified" datetime="2018-10-25T14:02:03+08:00">2018-10-25</time>
               
             
           </span>
@@ -1191,7 +1653,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1216,7 +1678,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

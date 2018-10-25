@@ -152,27 +152,25 @@
 
 
 
-  <meta name="description" content="一些废话Vue 是一套用于构建用户界面的渐进式框架。嗯！本人断断续续学习Vue也有一段时间了，只是一直没啥进展，而且很容易就忘了。故决定从头开始，认真学习。特来记录学习的过程，以铭吾志！ 生命周期:每个 Vue 应用都是通过用 Vue 函数创建一个新的 Vue 实例开始的1var app = new Vue(&amp;#123;&amp;#125;); 下面是Vue实例的生命周期解释一下生命周期就是Vue实例（将">
-<meta name="keywords" content="Vue">
+  <meta name="description" content="过渡效果Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。包括以下工具： 在 CSS 过渡和动画中自动应用 class可以配合使用第三方 CSS 动画库，如 Animate.css在过渡钩子函数中使用 JavaScript 直接操作 DOM可以配合使用第三方 JavaScript 动画库，如 Velocity.js 进入/离开这种情况下一般是针对单元素或者是组件来说的，添加">
+<meta name="keywords" content="Vue 记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue从入门到天意之初见">
-<meta property="og:url" content="http://canbelieve.gitee.io/2018/07/01/Vue学习记录/index.html">
+<meta property="og:title" content="Vue从入门到天意之过渡效果">
+<meta property="og:url" content="http://canbelieve.gitee.io/2018/10/25/Vue从入门到天意之过渡效果/index.html">
 <meta property="og:site_name" content="假面">
-<meta property="og:description" content="一些废话Vue 是一套用于构建用户界面的渐进式框架。嗯！本人断断续续学习Vue也有一段时间了，只是一直没啥进展，而且很容易就忘了。故决定从头开始，认真学习。特来记录学习的过程，以铭吾志！ 生命周期:每个 Vue 应用都是通过用 Vue 函数创建一个新的 Vue 实例开始的1var app = new Vue(&amp;#123;&amp;#125;); 下面是Vue实例的生命周期解释一下生命周期就是Vue实例（将">
+<meta property="og:description" content="过渡效果Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。包括以下工具： 在 CSS 过渡和动画中自动应用 class可以配合使用第三方 CSS 动画库，如 Animate.css在过渡钩子函数中使用 JavaScript 直接操作 DOM可以配合使用第三方 JavaScript 动画库，如 Velocity.js 进入/离开这种情况下一般是针对单元素或者是组件来说的，添加">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://canbelieve.gitee.io/image/lifecycle.png">
-<meta property="og:updated_time" content="2018-10-25T06:02:03.240Z">
+<meta property="og:updated_time" content="2018-10-25T10:20:58.031Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue从入门到天意之初见">
-<meta name="twitter:description" content="一些废话Vue 是一套用于构建用户界面的渐进式框架。嗯！本人断断续续学习Vue也有一段时间了，只是一直没啥进展，而且很容易就忘了。故决定从头开始，认真学习。特来记录学习的过程，以铭吾志！ 生命周期:每个 Vue 应用都是通过用 Vue 函数创建一个新的 Vue 实例开始的1var app = new Vue(&amp;#123;&amp;#125;); 下面是Vue实例的生命周期解释一下生命周期就是Vue实例（将">
-<meta name="twitter:image" content="http://canbelieve.gitee.io/image/lifecycle.png">
+<meta name="twitter:title" content="Vue从入门到天意之过渡效果">
+<meta name="twitter:description" content="过渡效果Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。包括以下工具： 在 CSS 过渡和动画中自动应用 class可以配合使用第三方 CSS 动画库，如 Animate.css在过渡钩子函数中使用 JavaScript 直接操作 DOM可以配合使用第三方 JavaScript 动画库，如 Velocity.js 进入/离开这种情况下一般是针对单元素或者是组件来说的，添加">
 
 
 
 
 
 
-  <link rel="canonical" href="http://canbelieve.gitee.io/2018/07/01/Vue学习记录/"/>
+  <link rel="canonical" href="http://canbelieve.gitee.io/2018/10/25/Vue从入门到天意之过渡效果/"/>
 
 
 
@@ -182,7 +180,7 @@
   };
 </script>
 
-  <title>Vue从入门到天意之初见 | 假面</title>
+  <title>Vue从入门到天意之过渡效果 | 假面</title>
   
 
 
@@ -343,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/07/01/Vue学习记录/">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/10/25/Vue从入门到天意之过渡效果/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
@@ -360,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue从入门到天意之初见
+          <h1 class="post-title" itemprop="name headline">Vue从入门到天意之过渡效果
               
             
           </h1>
@@ -385,24 +383,12 @@
                 
               
 
-              <time title="创建时间：2018-07-01 14:28:25" itemprop="dateCreated datePublished" datetime="2018-07-01T14:28:25+08:00">2018-07-01</time>
+              <time title="创建时间：2018-10-25 17:41:10 / 修改时间：18:20:58" itemprop="dateCreated datePublished" datetime="2018-10-25T17:41:10+08:00">2018-10-25</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-25 14:02:03" itemprop="dateModified" datetime="2018-10-25T14:02:03+08:00">2018-10-25</time>
               
             
           </span>
@@ -435,20 +421,32 @@
       
 
       
-        <h2 id="一些废话"><a href="#一些废话" class="headerlink" title="一些废话"></a>一些废话</h2><p>Vue 是一套用于构建用户界面的渐进式框架。嗯！<br>本人断断续续学习Vue也有一段时间了，只是一直没啥进展，而且很容易就忘了。故决定从头开始，认真学习。特来记录学习的过程，以铭吾志！</p>
-<h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期:"></a>生命周期:</h2><p>每个 Vue 应用都是通过用 Vue 函数创建一个新的 Vue 实例开始的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var app = new Vue(&#123;&#125;);</span><br></pre></td></tr></table></figure></p>
-<p>下面是Vue实例的生命周期<br><img src="/image/lifecycle.png" alt=""><br>解释一下生命周期就是Vue实例（将简称实例）在什么情况下会发生是什么事情的表示。</p>
-<h2 id="Vue语法"><a href="#Vue语法" class="headerlink" title="Vue语法"></a>Vue语法</h2><p>可以认为Vue语法由这三块内容组成  插值，指令和实例属性</p>
-<h3 id="插值"><a href="#插值" class="headerlink" title="插值"></a>插值</h3><p>Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至底层 Vue 实例的数据。<br>简单来说即使可以直接使用双大括号的形式  进行文本插值，且可以使用 javascript 表达式</p>
-<a id="more"></a>
-<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><p>指令 (Directives) 是带有 v- 前缀的特殊特性。可以自定义指令，将在以后讨论；</p>
-<p>指令一般的形式是这样的 v-xx=’oo’<br>常见的比如：</p>
+        <h1 id="过渡效果"><a href="#过渡效果" class="headerlink" title="过渡效果"></a>过渡效果</h1><p>Vue 在插入、更新或者移除 DOM 时，提供多种不同方式的应用过渡效果。<br>包括以下工具：</p>
+<p>在 CSS 过渡和动画中自动应用 class<br>可以配合使用第三方 CSS 动画库，如 Animate.css<br>在过渡钩子函数中使用 JavaScript 直接操作 DOM<br>可以配合使用第三方 JavaScript 动画库，如 Velocity.js</p>
+<h2 id="进入-离开"><a href="#进入-离开" class="headerlink" title="进入/离开"></a>进入/离开</h2><p>这种情况下一般是针对单元素或者是组件来说的，添加效果的方式很简单，只要在单元素或者组件外面套一层<transion></transion>标签即可.</p>
+<p>当插入或删除包含在 transition 组件中的元素时，Vue 将会做以下处理：</p>
 <ol>
-<li>用于条件判断的指令<br>v-if/v-else v-if/v-else-if…/v-else  &amp; v-show</li>
-<li>循环数组或者对象的指令<br>v-for<br>特殊一点的指令<br>v-bind:特性=’变量’  v-bind指令用于绑定html特性，可以动态更新html特性的值，可以简写成 :<br>v-on:event=’函数’  v-on指令用于绑定事件，用于监听事件的触发，可以简写成 @<br>v-model  用于表单的双向数据绑定，可以等价于 v-bind:value，v-on:input</li>
+<li><p>自动嗅探目标元素是否应用了 CSS 过渡或动画，如果是，在恰当的时机添加/删除 CSS 类名。</p>
+</li>
+<li><p>如果过渡组件提供了 JavaScript 钩子函数，这些钩子函数将在恰当的时机被调用。</p>
+</li>
+<li><p>如果没有找到 JavaScript 钩子并且也没有检测到 CSS 过渡/动画，DOM 操作 (插入/删除) 在下一帧中立即执行。(注意：此指浏览器逐帧动画机制，和 Vue 的 nextTick 概念不同)</p>
+</li>
 </ol>
-<p>指令可以添加修饰符，用于指出一个指令应该以特殊方式绑定。</p>
-<h3 id="实例属性"><a href="#实例属性" class="headerlink" title="实例属性"></a>实例属性</h3><p>el          表示一个实例化对象，值一般是#ID，字符串，如果不存在template属性，将以这个这个作为模板<br>template    模板属性，实例的渲染模板，优先级比el要高，这是由生命周期决定的<br>data        数据属性，存放初始数据，是一个对象<br>computed    计算属性，可以用于替代插值中的复杂计算，默认只有 getter ，不过在需要时你也可以提供一个 setter<br>methods     方法属性，用于处理一些逻辑，不同与计算属性是基于它们的依赖进行缓存的<br>watch       侦听属性，观察和响应 Vue 实例上的数据变动，用于需要在数据变化时执行异步或开销较大的操作</p>
+<p>举个例子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-on:click</span>=<span class="string">"show = !show"</span>&gt;</span></span><br><span class="line">    Toggle</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"show"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>如果transition没有name属性的话，那么会有默认的过渡状态样式类名：</p>
+<p>v-enter     进入过渡的开始状态<br>v-enter-active      进入过渡的生效状态<br>v-enter-to      进入过渡的结束状态<br>v-leave     离开过渡的开始状态<br>v-leave-active      离开过渡的生效状态<br>v-leave-to      离开过渡的结束状态</p>
+<p>可以在这些状态中设置css属性变化。可以是transition，也可以是annimation。</p>
+<p>如果使用了name属性，那么name的属性值将会替代上述类名的前缀v，</p>
+<p>除了自己需要设置的类名外，vue还提供了自定义的过渡状态类名，用来Vue 的过渡系统和其他第三方 CSS 动画库，因为可以直接放入写好的类名</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/animate.css@3.5.1"</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example-3"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"show = !show"</span>&gt;</span></span><br><span class="line">    Toggle render</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">transition</span></span></span><br><span class="line"><span class="tag">    <span class="attr">name</span>=<span class="string">"custom-classes-transition"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">enter-active-class</span>=<span class="string">"animated tada"</span></span></span><br><span class="line"><span class="tag">    <span class="attr">leave-active-class</span>=<span class="string">"animated bounceOutRight"</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-if</span>=<span class="string">"show"</span>&gt;</span>hello<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">transition</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>JavaScript 钩子:<br>可以在属性中声明 JavaScript 钩子，这些钩子函数可以结合 CSS transitions/animations 使用，也可以单独使用。</p>
+<p>过渡模式：</p>
+<p>因为同时生效的进入和离开的过渡不能满足所有要求，所以 Vue 提供了 过渡模式</p>
+<h2 id="列表过渡"><a href="#列表过渡" class="headerlink" title="列表过渡"></a>列表过渡</h2><p>选择使用 <code>&lt;transition-group&gt;</code> 组件，</p>
+<p>排列过渡：<br>使用新增的 v-move 特性，在元素的改变定位的过程中应用</p>
+<h2 id="数值过渡"><a href="#数值过渡" class="headerlink" title="数值过渡"></a>数值过渡</h2><p>所有的原始数字都被事先存储起来，可以直接转换到数字。做到这一步，我们就可以结合 Vue 的响应式和组件系统，使用第三方库来实现切换元素的过渡状态。</p>
 
       
     </div>
@@ -469,7 +467,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
+            <a href="/tags/Vue-记录/" rel="tag"># Vue 记录</a>
           
         </div>
       
@@ -482,8 +480,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/01/移动端小结/" rel="next" title="移动端小结">
-                <i class="fa fa-chevron-left"></i> 移动端小结
+              <a href="/2018/10/25/Vue从入门到天意之组件进阶/" rel="next" title="Vue从入门到天意之组件进阶">
+                <i class="fa fa-chevron-left"></i> Vue从入门到天意之组件进阶
               </a>
             
           </div>
@@ -491,10 +489,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/25/Vue学习从入门到天意之组件基础/" rel="prev" title="Vue从入门到天意之组件基础">
-                Vue从入门到天意之组件基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -664,7 +658,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一些废话"><span class="nav-number">1.</span> <span class="nav-text">一些废话</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生命周期"><span class="nav-number">2.</span> <span class="nav-text">生命周期:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue语法"><span class="nav-number">3.</span> <span class="nav-text">Vue语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#插值"><span class="nav-number">3.1.</span> <span class="nav-text">插值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令"><span class="nav-number">3.2.</span> <span class="nav-text">指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例属性"><span class="nav-number">3.3.</span> <span class="nav-text">实例属性</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#过渡效果"><span class="nav-number">1.</span> <span class="nav-text">过渡效果</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进入-离开"><span class="nav-number">1.1.</span> <span class="nav-text">进入/离开</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#列表过渡"><span class="nav-number">1.2.</span> <span class="nav-text">列表过渡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数值过渡"><span class="nav-number">1.3.</span> <span class="nav-text">数值过渡</span></a></li></ol></li></ol></div>
             
 
           </div>
