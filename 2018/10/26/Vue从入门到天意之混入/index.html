@@ -152,25 +152,25 @@
 
 
 
-  <meta name="description" content="一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。 这第一篇文章就记录一下这个博客的从无到有好了。 jekyll VS hexo一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp;am">
-<meta name="keywords" content="记录">
+  <meta name="description" content="混入混入 (mixins) 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。 选项合并当组件和混入对象含有同名选项时，这些选项将以恰当的方式混合。  数据对象的话会在内部会进行浅合并 (一层属性深度)，在和组件的数据发生冲突时以组件数据优先。 同名钩子函数（生命周期函数）将混合为一个数组，都将被调">
+<meta name="keywords" content="Vue,记录">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开启个人博客">
-<meta property="og:url" content="http://canbelieve.gitee.io/2018/05/30/开启个人博客/index.html">
+<meta property="og:title" content="Vue从入门到天意之混入">
+<meta property="og:url" content="http://canbelieve.gitee.io/2018/10/26/Vue从入门到天意之混入/index.html">
 <meta property="og:site_name" content="假面">
-<meta property="og:description" content="一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。 这第一篇文章就记录一下这个博客的从无到有好了。 jekyll VS hexo一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp;am">
+<meta property="og:description" content="混入混入 (mixins) 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。 选项合并当组件和混入对象含有同名选项时，这些选项将以恰当的方式混合。  数据对象的话会在内部会进行浅合并 (一层属性深度)，在和组件的数据发生冲突时以组件数据优先。 同名钩子函数（生命周期函数）将混合为一个数组，都将被调">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-20T10:41:18.136Z">
+<meta property="og:updated_time" content="2018-10-26T06:03:02.389Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="开启个人博客">
-<meta name="twitter:description" content="一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。 这第一篇文章就记录一下这个博客的从无到有好了。 jekyll VS hexo一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp;am">
+<meta name="twitter:title" content="Vue从入门到天意之混入">
+<meta name="twitter:description" content="混入混入 (mixins) 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。 选项合并当组件和混入对象含有同名选项时，这些选项将以恰当的方式混合。  数据对象的话会在内部会进行浅合并 (一层属性深度)，在和组件的数据发生冲突时以组件数据优先。 同名钩子函数（生命周期函数）将混合为一个数组，都将被调">
 
 
 
 
 
 
-  <link rel="canonical" href="http://canbelieve.gitee.io/2018/05/30/开启个人博客/"/>
+  <link rel="canonical" href="http://canbelieve.gitee.io/2018/10/26/Vue从入门到天意之混入/"/>
 
 
 
@@ -180,7 +180,7 @@
   };
 </script>
 
-  <title>开启个人博客 | 假面</title>
+  <title>Vue从入门到天意之混入 | 假面</title>
   
 
 
@@ -341,7 +341,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/05/30/开启个人博客/">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/10/26/Vue从入门到天意之混入/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="陈锋">
@@ -358,7 +358,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">开启个人博客
+          <h1 class="post-title" itemprop="name headline">Vue从入门到天意之混入
               
             
           </h1>
@@ -383,24 +383,12 @@
                 
               
 
-              <time title="创建时间：2018-05-30 12:56:29" itemprop="dateCreated datePublished" datetime="2018-05-30T12:56:29+08:00">2018-05-30</time>
+              <time title="创建时间：2018-10-26 13:46:24 / 修改时间：14:03:02" itemprop="dateCreated datePublished" datetime="2018-10-26T13:46:24+08:00">2018-10-26</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-20 18:41:18" itemprop="dateModified" datetime="2018-09-20T18:41:18+08:00">2018-09-20</time>
               
             
           </span>
@@ -433,34 +421,14 @@
       
 
       
-        <p>一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。</p>
-<p>这第一篇文章就记录一下这个博客的从无到有好了。</p>
-<h2 id="jekyll-VS-hexo"><a href="#jekyll-VS-hexo" class="headerlink" title="jekyll VS hexo"></a>jekyll VS hexo</h2><p>一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp; node 就行，对于一个做前端的来说，完全是标配啊。</p>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol>
-<li><p>打开命令行工具（cmd），并在全局环境下安装hexo工具；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install hexo-cli -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在某个目录下新建blog网站的文件夹，并初始化；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-</li>
+        <h1 id="混入"><a href="#混入" class="headerlink" title="混入"></a>混入</h1><p>混入 (mixins) 是一种分发 Vue 组件中可复用功能的非常灵活的方式。混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被混入该组件本身的选项。</p>
+<h2 id="选项合并"><a href="#选项合并" class="headerlink" title="选项合并"></a>选项合并</h2><p>当组件和混入对象含有同名选项时，这些选项将以恰当的方式混合。</p>
+<ol>
+<li>数据对象的话会在内部会进行浅合并 (一层属性深度)，在和组件的数据发生冲突时以组件数据优先。</li>
+<li>同名钩子函数（生命周期函数）将混合为一个数组，都将被调用。且混入对象的钩子将在组件自身钩子之前调用。</li>
+<li>组件属性的话（组件的选项）,将被混合为同一个对象,两个对象键名冲突时，取组件对象的键值对。</li>
 </ol>
-<a id="more"></a>
-<ol start="3">
-<li><p>进入这个项目，并安装相应的包文件；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>本地预览，开启本地服务器；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>到此，基本上你就可以预览到官方的默认hello页面了，当然这只是本地的，别人是访问不到的，下一步，我们需要将blog部署到线上，让别人也能看得到；</p>
-<h2 id="部署到线上"><a href="#部署到线上" class="headerlink" title="部署到线上"></a>部署到线上</h2><p>你可以单独弄一个服务器或者也可以使用别人提供的这种服务，比如说 GitHub 和 码云 都是提供这种服务的，就是那个pages服务，我选择的是码云，那就以码云为例好了。<br>首先：需要在码云上建立一个仓库，这个从仓库的名字最好是你的英文名字，或者一个看起来好不错的英文，<br>仓库建好之后，复制仓库的url地址，打开本地项目下一级目录中的_config.yml文件（这个是配置文件），找到deploy字段（最底部），替换ropo的值为刚才复制的地址。<br>其次：安装自动部署工具</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>然后： 使用命令部署发布</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>第一部署发布需要验证码云的账号密码，稍等一下，提示发布成功之后，访问你建立的那个项目中的pages服务，你会看到一个类似于这个<a href="https://canbelieve.gitee.io的地址，访问你的这个地址，就能看到你发布的内容啦。" target="_blank" rel="noopener">https://canbelieve.gitee.io的地址，访问你的这个地址，就能看到你发布的内容啦。</a></p>
-<p>到此，一个简单的blog就建立成功了，之后还有主题，导航，评论等内容，就需要自己去寻找思路了。</p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">hexo文档</a><br><a href="https://hooray.github.io/posts/15e2d21f" target="_blank" rel="noopener">快速搭建个人博客</a></p>
+<h2 id="全局混入"><a href="#全局混入" class="headerlink" title="全局混入"></a>全局混入</h2><p>全局注册混入对象会影响到 所有 之后创建的 Vue 实例。另外可以为自定义对象注入处理逻辑。</p>
 
       
     </div>
@@ -481,7 +449,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/记录/" rel="tag"># 记录</a>
+            <a href="/tags/Vue-记录/" rel="tag"># Vue,记录</a>
           
         </div>
       
@@ -494,14 +462,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/10/25/Vue从入门到天意之过渡效果/" rel="next" title="Vue从入门到天意之过渡效果">
+                <i class="fa fa-chevron-left"></i> Vue从入门到天意之过渡效果
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/07/01/前端常用样式/" rel="prev" title="前端常用样式">
-                前端常用样式 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/26/Vue从入门到天意之自定义指令/" rel="prev" title="Vue从入门到天意之自定义指令">
+                Vue从入门到天意之自定义指令 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -674,7 +646,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#jekyll-VS-hexo"><span class="nav-number">1.</span> <span class="nav-text">jekyll VS hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署到线上"><span class="nav-number">3.</span> <span class="nav-text">部署到线上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#混入"><span class="nav-number">1.</span> <span class="nav-text">混入</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#选项合并"><span class="nav-number">1.1.</span> <span class="nav-text">选项合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局混入"><span class="nav-number">1.2.</span> <span class="nav-text">全局混入</span></a></li></ol></li></ol></div>
             
 
           </div>
