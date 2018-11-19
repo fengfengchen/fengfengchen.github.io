@@ -340,6 +340,164 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/11/17/ES6之箭头函数-this指针/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="陈锋">
+      <meta itemprop="description" content="The world is under my feet">
+      <meta itemprop="image" content="/images/siteicon.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="假面">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/17/ES6之箭头函数-this指针/" itemprop="url">
+                  ES6之箭头函数&this指针
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-11-17 15:53:19" itemprop="dateCreated datePublished" datetime="2018-11-17T15:53:19+08:00">2018-11-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-19 14:20:47" itemprop="dateModified" datetime="2018-11-19T14:20:47+08:00">2018-11-19</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p>2009年，ES5发布；随后，2011年，ES5.1发布，也就是我们现在常用的JS标准，当然这个版本也已经有些年头了，所以我们需要开始学习下一代的规范版本了，也就是ES6，用官方的话来说，这是一个集大成的版本，更新了很多新的内容，值得每一个前端去学习掌握，嗯，开始学习了！</p>
+<h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>箭头函数 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">下面先来看一下ES5中函数的写法。</span><br></pre></td></tr></table></figure></p>
+<p>// 第一种，声明形式<br>function fn(){}<br>// 第二种，表达式形式<br>let fn = function(){}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ES5中，函数可以有两种形式的写法，声明形式和表达式的形式，在ES6中，这两种形式没有被取代，只不过对于表达式形式的写法（左边是变量，右边是匿名函数，使用赋值符号连接）可以利用箭头函数替换，简单来说就是箭头函数的写法对于匿名函数有效，对于声明式的函数不行。</span><br><span class="line"></span><br><span class="line">于是，上面的形式可以换成这种</span><br></pre></td></tr></table></figure></p>
+<p>let fn = ()=&gt;{}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">是不是感觉简洁多了。</span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">### 箭头函数的简洁性</span><br><span class="line">去除function关键字</span><br></pre></td></tr></table></figure></p>
+<p>var fn = function(param){<br>    return param;<br>}<br>let fn = (param)=&gt;{return param}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">只有一个形参的时候可以省略括号（没有形参或不止一个形参则不行）</span><br></pre></td></tr></table></figure></p>
+<p>let fn = param =&gt;{<br>    return param*param<br>}<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">可以省略return 关键字</span><br><span class="line">```              </span><br><span class="line">let fn = (param)=&gt;param*param;</span><br><span class="line">// 此函数的返回值就是实参值得平方</span><br><span class="line"></span><br><span class="line">// 注意，当return 关键字存在的时候，一定存在大括号&#123;&#125;，反之，当大括号存在的时候，如果有return，则表示此函数有返回值，如果没有，则表示大括号里的内容都是函数的语句，因此，这些语句应符合规范</span><br><span class="line">// 举个例子</span><br><span class="line">var fn = () =&gt; &#123; foo: 1 &#125;;    // Calling func() returns undefined! </span><br><span class="line">// 上面这段代码的原意是要返回这个对象，但结果却返回一个undefined，这是因为没有指定返回值的原因，应该改成这样</span><br><span class="line"></span><br><span class="line">var fn = ()=&gt;(&#123;foo:1&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="箭头函数中的this"><a href="#箭头函数中的this" class="headerlink" title="箭头函数中的this"></a>箭头函数中的this</h3><p>前面提到，箭头函数中是不绑定this的，而普通的函数（只能是函数）中的this是指代当前函数执行时的环境对象，既然如此，那么我们可以认为箭头函数中的this是指其外层函数的执行时的环境对象，如果不存在外层函数，那就一级一级往上递推，最终还是没有的话，那就指代window对象。<br>举几个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">//普通形式</span><br><span class="line">let fn = function () &#123;</span><br><span class="line">    console.log(this);</span><br><span class="line">&#125;</span><br><span class="line">fn() // window</span><br><span class="line">// es6简写</span><br><span class="line">let fn = () =&gt; &#123;</span><br><span class="line">    console.log(this)</span><br><span class="line">&#125;</span><br><span class="line">fn() //window</span><br><span class="line"></span><br><span class="line">//对象中的方法</span><br><span class="line">const obj = &#123;</span><br><span class="line">    name: &apos;obj&apos;,</span><br><span class="line">    that: this,</span><br><span class="line">    fn1: function () &#123;</span><br><span class="line">        console.log(this);</span><br><span class="line">    &#125;,</span><br><span class="line">    fn2: () =&gt; console.log(this),</span><br><span class="line">&#125;</span><br><span class="line">// obj.fn1(); //obj</span><br><span class="line">// obj.fn2(); //window</span><br><span class="line"></span><br><span class="line">function fn0() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">        fn1: function () &#123;</span><br><span class="line">            var obj = &#123;</span><br><span class="line">                a: function () &#123;</span><br><span class="line">                    console.log(this)</span><br><span class="line">                &#125;,</span><br><span class="line">                b: &#123;</span><br><span class="line">                    d: function () &#123;</span><br><span class="line">                        console.log(this);</span><br><span class="line">                    &#125;,</span><br><span class="line">                    c: () =&gt; console.log(this)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            return obj;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// fn0().fn1().b.c() //&#123;fn1:fn&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/10/26/Vue从入门到天意之自定义指令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -386,12 +544,24 @@
                 
               
 
-              <time title="创建时间：2018-10-26 14:04:46 / 修改时间：14:26:25" itemprop="dateCreated datePublished" datetime="2018-10-26T14:04:46+08:00">2018-10-26</time>
+              <time title="创建时间：2018-10-26 14:04:46" itemprop="dateCreated datePublished" datetime="2018-10-26T14:04:46+08:00">2018-10-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-17 15:55:48" itemprop="dateModified" datetime="2018-11-17T15:55:48+08:00">2018-11-17</time>
               
             
           </span>
@@ -532,12 +702,24 @@
                 
               
 
-              <time title="创建时间：2018-10-26 13:46:24 / 修改时间：14:03:02" itemprop="dateCreated datePublished" datetime="2018-10-26T13:46:24+08:00">2018-10-26</time>
+              <time title="创建时间：2018-10-26 13:46:24" itemprop="dateCreated datePublished" datetime="2018-10-26T13:46:24+08:00">2018-10-26</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-17 15:55:48" itemprop="dateModified" datetime="2018-11-17T15:55:48+08:00">2018-11-17</time>
               
             
           </span>
@@ -696,7 +878,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-26 13:45:40" itemprop="dateModified" datetime="2018-10-26T13:45:40+08:00">2018-10-26</time>
+                <time title="修改时间：2018-11-17 15:55:48" itemprop="dateModified" datetime="2018-11-17T15:55:48+08:00">2018-11-17</time>
               
             
           </span>
@@ -848,12 +1030,24 @@
                 
               
 
-              <time title="创建时间：2018-10-25 14:58:37 / 修改时间：18:26:28" itemprop="dateCreated datePublished" datetime="2018-10-25T14:58:37+08:00">2018-10-25</time>
+              <time title="创建时间：2018-10-25 14:58:37" itemprop="dateCreated datePublished" datetime="2018-10-25T14:58:37+08:00">2018-10-25</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-17 15:55:48" itemprop="dateModified" datetime="2018-11-17T15:55:48+08:00">2018-11-17</time>
               
             
           </span>
@@ -1015,7 +1209,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-26 14:12:41" itemprop="dateModified" datetime="2018-10-26T14:12:41+08:00">2018-10-26</time>
+                <time title="修改时间：2018-11-17 15:55:48" itemprop="dateModified" datetime="2018-11-17T15:55:48+08:00">2018-11-17</time>
               
             
           </span>
@@ -1752,175 +1946,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://canbelieve.gitee.io/2018/05/30/开启个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="陈锋">
-      <meta itemprop="description" content="The world is under my feet">
-      <meta itemprop="image" content="/images/siteicon.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="假面">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/05/30/开启个人博客/" itemprop="url">
-                  开启个人博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-05-30 12:56:29" itemprop="dateCreated datePublished" datetime="2018-05-30T12:56:29+08:00">2018-05-30</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-09-20 18:41:18" itemprop="dateModified" datetime="2018-09-20T18:41:18+08:00">2018-09-20</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>一直都没有写东西的习惯，一是因为文学功底不够，另一个是比较排斥。但是呢，好记性不如烂笔头，基于此，还是决定克服自身的这种排斥情绪。</p>
-<p>这第一篇文章就记录一下这个博客的从无到有好了。</p>
-<h2 id="jekyll-VS-hexo"><a href="#jekyll-VS-hexo" class="headerlink" title="jekyll VS hexo"></a>jekyll VS hexo</h2><p>一开始是准备使用jekyll的，知名度还挺高的，就是对于windows系统不大友好，我也没有找到好的中文教程，官方的教程我照做了，就是没成功。。。所以我最后选择了hexo，只要有npm &amp; node 就行，对于一个做前端的来说，完全是标配啊。</p>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol>
-<li><p>打开命令行工具（cmd），并在全局环境下安装hexo工具；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install hexo-cli -g</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在某个目录下新建blog网站的文件夹，并初始化；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/30/开启个人博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1965,7 +1997,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1992,9 +2024,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2009,11 +2039,6 @@
               
                 <span class="links-of-author-item">
                   <a href="https://github.com/fengfengchen" target="_blank" title="GitHub"><i class="fa fa-fw fa-github"></i>GitHub</a>
-                  
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://gitee.com/canbelieve" target="_blank" title="E-Mail"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
                   
                 </span>
               
